@@ -65,7 +65,6 @@ def show_find():
         "Spirit",
         spirit_options,
         selection_mode="single",
-        default=st.session_state["selected_spirit"],
         label_visibility="collapsed",
         key="spirit_pills"
     )
@@ -83,7 +82,6 @@ def show_find():
         "Flavor",
         FLAVORS,
         selection_mode="multi",
-        default=st.session_state["selected_flavors"],
         label_visibility="collapsed",
         key="flavor_pills"
     )
@@ -126,7 +124,6 @@ def _render_az_list(cocktails, prefix, state_key=None):
         "Letter",
         letters,
         selection_mode="single",
-        default=active,
         label_visibility="collapsed",
         key=f"letter_pills_{prefix}"
     )
