@@ -186,6 +186,8 @@ def _render_az_list(cocktails, prefix, state_key=None):
         # Show recipe directly below the selected card
         if selected_id == c["id"]:
             _render_detail(state_key)
+            st.divider()
+            st.markdown("<div style='margin-bottom:48px'></div>", unsafe_allow_html=True)
 
     if total_pages > 1:
         p1, p2, p3 = st.columns([1, 2, 1])
@@ -215,7 +217,7 @@ def _render_detail(state_key="selected_id_all"):
     if not c:
         return
 
-    st.divider()
+    st.markdown("<div style='margin-top:8px'></div>", unsafe_allow_html=True)
     glass_svg = get_glass_svg(c["glass"])
     st.markdown(f"<div style='font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:#8a7f6e'>{c['spirit_label']}</div>", unsafe_allow_html=True)
     st.markdown(
