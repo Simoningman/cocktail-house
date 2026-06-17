@@ -44,6 +44,49 @@ div[data-testid="stPills"] button {
 """
 
 
+def _ingredients_preview(c):
+    """Return all ingredient names as a comma-separated string."""
+    return " · ".join(ing[1] for ing in c["ingredients"])
+
+
+def _render_card(c, prefix, state_key, selected_id):
+    """Render a single cocktail card with toggle behaviour."""
+    selected = selected_id == c["id"]
+    border   = "#c9a84c" if selected else "#c9a84c22"
+    bg       = "#1e2636" if selected else "#161c26"
+    glass_svg = get_glass_svg(c["glass"])
+    ingredients_preview = _ingredients_preview(c)
+
+    st.markdown(
+        f'<div style="background:{bg};border:1px solid {border};border-radius:10px 10px 0 0;'
+        f'padding:12px 16px 8px;display:flex;align-items:center;gap:14px;margin-bottom:0">'
+        f'<div style="flex-shrink:0">{glass_svg}</div>'
+        f'<div style="min-width:0">'
+        f'<div style="color:#e8dcc8;font-weight:500;font-size:0.95rem">{c["name"]}</div>'
+        f'<div style="color:#8a7f6e;font-size:0.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{ingredients_preview}</div>'
+        f'</div></div>'
+        f'<div style="background:{bg};border:1px solid {border};border-top:none;'
+        f'border-radius:0 0 10px 10px;margin-bottom:8px">',
+        unsafe_allow_html=True,
+    )
+
+    btn_label = "▾  Close recipe" if selected else "▸  View recipe"
+    if st.button(btn_label, key=f"btn_{prefix}_{c['id']}", use_container_width=True):
+        if selected:
+            st.session_state[state_key] = None  # toggle off
+        else:
+            st.session_state[state_key] = c["id"]
+            if hasattr(st.session_state, 'viewed'):
+                st.session_state.viewed.add(c["id"])
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    if selected:
+        _render_detail(state_key)
+        st.divider()
+        st.markdown("<div style='margin-bottom:48px'></div>", unsafe_allow_html=True)
+
+
 def show():
     st.markdown(CARD_STYLE, unsafe_allow_html=True)
     _render_az_list(COCKTAILS, prefix="all", state_key="selected_id_all")
@@ -62,11 +105,8 @@ def show_find():
         st.session_state["selected_spirit"] = None
 
     chosen_spirit_pill = st.pills(
-        "Spirit",
-        spirit_options,
-        selection_mode="single",
-        label_visibility="collapsed",
-        key="spirit_pills"
+        "Spirit", spirit_options, selection_mode="single",
+        label_visibility="collapsed", key="spirit_pills"
     )
     if chosen_spirit_pill != st.session_state["selected_spirit"]:
         st.session_state["selected_spirit"] = chosen_spirit_pill
@@ -79,11 +119,8 @@ def show_find():
         st.session_state["selected_flavors"] = []
 
     chosen_flavors = st.pills(
-        "Flavor",
-        FLAVORS,
-        selection_mode="multi",
-        label_visibility="collapsed",
-        key="flavor_pills"
+        "Flavor", FLAVORS, selection_mode="multi",
+        label_visibility="collapsed", key="flavor_pills"
     )
     if chosen_flavors != st.session_state["selected_flavors"]:
         st.session_state["selected_flavors"] = chosen_flavors
@@ -93,7 +130,6 @@ def show_find():
 
     filtered = filter_cocktails(chosen_spirit, chosen_flavors, search)
 
-    # Om inget filter är valt — visa instruktion
     if chosen_spirit == "All" and not chosen_flavors and not search:
         st.markdown(
             f"<div style='color:#4a4540;font-size:0.85rem;padding:16px 0;text-align:center'>"
@@ -105,48 +141,45 @@ def show_find():
         st.markdown("<div style='color:#4a4540;padding:24px 0'>No cocktails matched.</div>", unsafe_allow_html=True)
         return
 
-    # Visa antal matchande
-    st.markdown(
-        f"<div style='color:#8a7f6e;font-size:0.7rem;margin:8px 0 12px'>"
-        f"<span style='color:#c9a84c'>{len(filtered)}</span> cocktail{'s' if len(filtered) > 1 else ''} matched</div>",
-        unsafe_allow_html=True)
-
-    # Visa alla matchande drinkar direkt — ingen bokstavsnavigering
-    state_key = "selected_id_find"
-    selected_id = st.session_state.get(state_key)
-    prefix = "find"
+    state_key  = "selected_id_find"
+    page_key   = "page_find"
+    if page_key not in st.session_state:
+        st.session_state[page_key] = 0
 
     sorted_filtered = sorted(filtered, key=lambda c: c["name"].upper())
+    total       = len(sorted_filtered)
+    total_pages = (total - 1) // PER_PAGE + 1
+    page        = max(0, min(st.session_state[page_key], total_pages - 1))
+    start       = page * PER_PAGE
+    page_items  = sorted_filtered[start:start + PER_PAGE]
 
-    for c in sorted_filtered:
-        selected = selected_id == c["id"]
-        border = "#c9a84c" if selected else "#c9a84c22"
-        bg = "#1e2636" if selected else "#161c26"
-        glass_svg = get_glass_svg(c["glass"])
-        first_ing = c["ingredients"][0][1] if c["ingredients"] else c["spirit_label"]
+    st.markdown(
+        f"<div style='color:#8a7f6e;font-size:0.7rem;margin:8px 0 12px'>"
+        f"<span style='color:#c9a84c'>{total}</span> cocktail{'s' if total > 1 else ''} matched  ·  "
+        f"Page {page+1} of {total_pages}</div>",
+        unsafe_allow_html=True)
 
-        st.markdown(
-            f'<div style="background:{bg};border:1px solid {border};border-radius:10px 10px 0 0;'
-            f'padding:12px 16px 8px;display:flex;align-items:center;gap:14px;margin-bottom:0">'
-            f'<div style="flex-shrink:0">{glass_svg}</div>'
-            f'<div>'
-            f'<div style="color:#e8dcc8;font-weight:500;font-size:0.95rem">{c["name"]}</div>'
-            f'<div style="color:#8a7f6e;font-size:0.78rem">{first_ing}</div>'
-            f'</div></div>'
-            f'<div style="background:{bg};border:1px solid {border};border-top:none;'
-            f'border-radius:0 0 10px 10px;margin-bottom:8px">',
-            unsafe_allow_html=True,
-        )
-        if st.button("▸  View recipe", key=f"btn_{prefix}_{c['id']}", use_container_width=True):
-            st.session_state[state_key] = c["id"]
-            st.session_state.viewed.add(c["id"])
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
+    selected_id = st.session_state.get(state_key)
+    for c in page_items:
+        _render_card(c, "find", state_key, selected_id)
 
-        if selected_id == c["id"]:
-            _render_detail(state_key)
-            st.divider()
-            st.markdown("<div style='margin-bottom:48px'></div>", unsafe_allow_html=True)
+    if total_pages > 1:
+        p1, p2, p3 = st.columns([1, 2, 1])
+        with p1:
+            if page > 0:
+                if st.button("← Prev", key="prev_find", use_container_width=True):
+                    st.session_state[page_key] = page - 1
+                    st.rerun()
+        with p2:
+            st.markdown(
+                f"<div style='text-align:center;color:#8a7f6e;font-size:0.75rem;padding-top:8px'>"
+                f"{start+1}–{min(start+PER_PAGE,total)} of {total}</div>",
+                unsafe_allow_html=True)
+        with p3:
+            if page < total_pages - 1:
+                if st.button("Next →", key="next_find", use_container_width=True):
+                    st.session_state[page_key] = page + 1
+                    st.rerun()
 
 
 def _render_az_list(cocktails, prefix, state_key=None):
@@ -171,17 +204,14 @@ def _render_az_list(cocktails, prefix, state_key=None):
     active = st.session_state[active_key]
 
     chosen_letter = st.pills(
-        "Letter",
-        letters,
-        selection_mode="single",
-        label_visibility="collapsed",
-        key=f"letter_pills_{prefix}"
+        "Letter", letters, selection_mode="single",
+        label_visibility="collapsed", key=f"letter_pills_{prefix}"
     )
 
     if chosen_letter != active:
         st.session_state[active_key] = chosen_letter
         st.session_state[page_key] = 0
-        st.session_state[f"selected_id_{prefix}"] = None
+        st.session_state[state_key] = None
         st.rerun()
 
     if not chosen_letter or chosen_letter not in groups:
@@ -206,34 +236,7 @@ def _render_az_list(cocktails, prefix, state_key=None):
     selected_id = st.session_state.get(state_key)
 
     for c in page_items:
-        selected  = selected_id == c["id"]
-        border    = "#c9a84c" if selected else "#c9a84c22"
-        bg        = "#1e2636" if selected else "#161c26"
-        glass_svg = get_glass_svg(c["glass"])
-        first_ing = c["ingredients"][0][1] if c["ingredients"] else c["spirit_label"]
-
-        st.markdown(
-            f'<div style="background:{bg};border:1px solid {border};border-radius:10px 10px 0 0;'
-            f'padding:12px 16px 8px;display:flex;align-items:center;gap:14px;margin-bottom:0">'
-            f'<div style="flex-shrink:0">{glass_svg}</div>'
-            f'<div>'
-            f'<div style="color:#e8dcc8;font-weight:500;font-size:0.95rem">{c["name"]}</div>'
-            f'<div style="color:#8a7f6e;font-size:0.78rem">{first_ing}</div>'
-            f'</div></div>'
-            f'<div style="background:{bg};border:1px solid {border};border-top:none;'
-            f'border-radius:0 0 10px 10px;margin-bottom:8px">',
-            unsafe_allow_html=True,
-        )
-        if st.button("▸  View recipe", key=f"btn_{prefix}_{c['id']}", use_container_width=True):
-            st.session_state[f"selected_id_{prefix}"] = c["id"]
-            st.session_state.viewed.add(c["id"])
-            st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        if selected_id == c["id"]:
-            _render_detail(state_key)
-            st.divider()
-            st.markdown("<div style='margin-bottom:48px'></div>", unsafe_allow_html=True)
+        _render_card(c, prefix, state_key, selected_id)
 
     if total_pages > 1:
         p1, p2, p3 = st.columns([1, 2, 1])

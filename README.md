@@ -44,7 +44,7 @@ Built entirely in Python with Streamlit — no JavaScript required.
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.pyx
+streamlit run app.py
 The app opens automatically at `http://localhost:8501`.
 
 ---
