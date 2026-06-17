@@ -92,10 +92,61 @@ def show_find():
     st.divider()
 
     filtered = filter_cocktails(chosen_spirit, chosen_flavors, search)
+
+    # Om inget filter är valt — visa instruktion
+    if chosen_spirit == "All" and not chosen_flavors and not search:
+        st.markdown(
+            f"<div style='color:#4a4540;font-size:0.85rem;padding:16px 0;text-align:center'>"
+            f"Select a spirit or flavor  ·  <span style='font-size:0.7rem'>{len(COCKTAILS)} cocktails</span></div>",
+            unsafe_allow_html=True)
+        return
+
     if not filtered:
         st.markdown("<div style='color:#4a4540;padding:24px 0'>No cocktails matched.</div>", unsafe_allow_html=True)
-    else:
-        _render_az_list(filtered, prefix="find", state_key="selected_id_find")
+        return
+
+    # Visa antal matchande
+    st.markdown(
+        f"<div style='color:#8a7f6e;font-size:0.7rem;margin:8px 0 12px'>"
+        f"<span style='color:#c9a84c'>{len(filtered)}</span> cocktail{'s' if len(filtered) > 1 else ''} matched</div>",
+        unsafe_allow_html=True)
+
+    # Visa alla matchande drinkar direkt — ingen bokstavsnavigering
+    state_key = "selected_id_find"
+    selected_id = st.session_state.get(state_key)
+    prefix = "find"
+
+    sorted_filtered = sorted(filtered, key=lambda c: c["name"].upper())
+
+    for c in sorted_filtered:
+        selected = selected_id == c["id"]
+        border = "#c9a84c" if selected else "#c9a84c22"
+        bg = "#1e2636" if selected else "#161c26"
+        glass_svg = get_glass_svg(c["glass"])
+        first_ing = c["ingredients"][0][1] if c["ingredients"] else c["spirit_label"]
+
+        st.markdown(
+            f'<div style="background:{bg};border:1px solid {border};border-radius:10px 10px 0 0;'
+            f'padding:12px 16px 8px;display:flex;align-items:center;gap:14px;margin-bottom:0">'
+            f'<div style="flex-shrink:0">{glass_svg}</div>'
+            f'<div>'
+            f'<div style="color:#e8dcc8;font-weight:500;font-size:0.95rem">{c["name"]}</div>'
+            f'<div style="color:#8a7f6e;font-size:0.78rem">{first_ing}</div>'
+            f'</div></div>'
+            f'<div style="background:{bg};border:1px solid {border};border-top:none;'
+            f'border-radius:0 0 10px 10px;margin-bottom:8px">',
+            unsafe_allow_html=True,
+        )
+        if st.button("▸  View recipe", key=f"btn_{prefix}_{c['id']}", use_container_width=True):
+            st.session_state[state_key] = c["id"]
+            st.session_state.viewed.add(c["id"])
+            st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        if selected_id == c["id"]:
+            _render_detail(state_key)
+            st.divider()
+            st.markdown("<div style='margin-bottom:48px'></div>", unsafe_allow_html=True)
 
 
 def _render_az_list(cocktails, prefix, state_key=None):
@@ -119,7 +170,6 @@ def _render_az_list(cocktails, prefix, state_key=None):
 
     active = st.session_state[active_key]
 
-    # Letter navigation using st.pills — works perfectly on mobile
     chosen_letter = st.pills(
         "Letter",
         letters,
@@ -180,7 +230,6 @@ def _render_az_list(cocktails, prefix, state_key=None):
             st.rerun()
         st.markdown('</div>', unsafe_allow_html=True)
 
-        # Show recipe directly below the selected card
         if selected_id == c["id"]:
             _render_detail(state_key)
             st.divider()

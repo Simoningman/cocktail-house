@@ -2701,14 +2701,14 @@ COCKTAILS = [
         "name": "Irish Coffee",
         "emoji": "☕",
         "spirit": "whiskey",
-        "spirit_label": "Whiskey / Bourbon",
+        "spirit_label": "Whiskey",
         "flavors": ["warm", "sweet", "strong", "creamy"],
         "difficulty": "Easy",
         "glass": "Irish coffee glass",
         "ingredients": [
             ("50 ml", "Irish whiskey"),
             ("120 ml", "Hot strong coffee"),
-            ("15 ml", "Brown sugar syrup"),
+            ("2 tsp", "Brown sugar"),
             ("Top", "Lightly whipped cream"),
         ],
         "steps": [
