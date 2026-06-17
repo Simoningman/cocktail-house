@@ -32,12 +32,10 @@ st.markdown("""
         max-width: 1200px;
     }
 
-    /* All general text bright and readable */
     p, span, div, label, li {
         color: #e8dcc8 !important;
     }
 
-    /* Expander cards */
     .stExpander {
         background: #161c26 !important;
         border: 1px solid #c9a84c44 !important;
@@ -48,19 +46,16 @@ st.markdown("""
         border-color: #c9a84caa !important;
     }
 
-    /* Expander header text — cocktail name */
     .stExpander summary p {
         color: #e8dcc8 !important;
         font-size: 1rem !important;
         font-weight: 500 !important;
     }
 
-    /* Radio buttons label text */
     .stRadio label p {
         color: #e8dcc8 !important;
     }
 
-    /* Section headings like "Choose spirit" */
     .stMarkdown p strong {
         color: #c9a84c !important;
         font-size: 0.75rem;
@@ -68,12 +63,10 @@ st.markdown("""
         text-transform: uppercase;
     }
 
-    /* Caption text (cocktail count) */
     .stCaptionContainer p {
         color: #8a7f6e !important;
     }
 
-    /* Metrics */
     [data-testid="stMetric"] {
         background: #161c26;
         border: 1px solid #c9a84c33;
@@ -91,7 +84,6 @@ st.markdown("""
         text-transform: uppercase;
     }
 
-    /* Tabs */
     .stTabs [data-baseweb="tab"] {
         font-size: 0.9rem;
         letter-spacing: 1px;
@@ -103,7 +95,6 @@ st.markdown("""
         border-bottom-color: #c9a84c !important;
     }
 
-    /* Search input */
     .stTextInput input {
         background: #161c26 !important;
         border: 1px solid #c9a84c44 !important;
@@ -117,7 +108,6 @@ st.markdown("""
         box-shadow: 0 0 0 1px #c9a84c44 !important;
     }
 
-    /* Multiselect — make it match the dark theme */
     .stMultiSelect [data-baseweb="select"] > div {
         background: #161c26 !important;
         border: 1px solid #c9a84c44 !important;
@@ -129,10 +119,8 @@ st.markdown("""
     }
     .stMultiSelect span { color: #e8dcc8 !important; }
     .stMultiSelect [data-baseweb="select"] input { color: #e8dcc8 !important; }
-    /* Placeholder text in multiselect */
     .stMultiSelect [data-baseweb="select"] [data-testid="stMarkdownContainer"] p { color: #4a4540 !important; }
     div[data-baseweb="select"] > div { background-color: #161c26 !important; }
-    /* Dropdown popup list */
     ul[data-baseweb="menu"] {
         background-color: #161c26 !important;
         border: 1px solid #c9a84c44 !important;
@@ -146,7 +134,6 @@ st.markdown("""
         background-color: #c9a84c22 !important;
         color: #c9a84c !important;
     }
-    /* The popup container itself */
     [data-baseweb="popover"] > div,
     [data-baseweb="popover"] ul {
         background-color: #161c26 !important;
@@ -162,27 +149,22 @@ st.markdown("""
         background-color: #c9a84c22 !important;
         color: #c9a84c !important;
     }
-    /* Selected tags inside multiselect */
     [data-baseweb="tag"] {
         background: #c9a84c22 !important;
         border: 1px solid #c9a84c44 !important;
     }
     [data-baseweb="tag"] span { color: #c9a84c !important; }
 
-    /* Progress bars */
     .stProgress > div > div {
         background: linear-gradient(90deg, #7a6230, #c9a84c) !important;
         border-radius: 100px;
     }
-    /* Progress bar background track */
     .stProgress > div {
         background-color: #2a3040 !important;
         border-radius: 100px;
     }
-    /* Progress bar text */
     .stProgress p { color: #e8dcc8 !important; font-size: 0.8rem !important; }
 
-    /* Code blocks (ingredient amounts) */
     code {
         background: #c9a84c22 !important;
         color: #c9a84c !important;
@@ -192,31 +174,25 @@ st.markdown("""
         font-size: 0.8rem !important;
     }
 
-    /* Info box (did you know) */
     [data-testid="stNotification"] {
         background: #1a2a1e !important;
         border-left-color: #6abf8a !important;
     }
     [data-testid="stNotification"] p { color: #e8dcc8 !important; }
 
-    /* Warning box (bartender tip) */
     div[data-baseweb="notification"] {
         background: #2a2010 !important;
     }
 
-    /* Markdown inside expanders */
     .stExpander .stMarkdown p { color: #e8dcc8 !important; }
     .stExpander .stMarkdown li { color: #e8dcc8 !important; }
     .stExpander .stMarkdown strong { color: #c9a84c !important; }
 
-    /* Divider */
     hr { border-color: #c9a84c22 !important; }
 
-    /* Info / warning boxes */
     .stAlert { border-radius: 10px !important; }
     .stAlert p { color: #e8dcc8 !important; }
 
-    /* Quiz buttons */
     .stButton > button {
         background: #161c26 !important;
         border: 1px solid #c9a84c44 !important;
@@ -257,7 +233,7 @@ st.markdown(
 )
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Bartender Pick — random on each page load
+# Bartender Pick
 import random
 if "bartenders_pick" not in st.session_state:
     st.session_state.bartenders_pick = random.choice(COCKTAILS)
@@ -282,14 +258,14 @@ html = (
 st.markdown(html, unsafe_allow_html=True)
 st.divider()
 
-# Tabs
-tab_explore, tab_find, tab_quiz = st.tabs(["🍸 All", "🔍 Find", "🧠 Quiz"])
-
-with tab_explore:
-    explore.show()
+# Tabs — Find first, then All, then Quiz
+tab_find, tab_explore, tab_quiz = st.tabs(["🔍 Find", "🍸 All", "🧠 Quiz"])
 
 with tab_find:
     explore.show_find()
+
+with tab_explore:
+    explore.show()
 
 with tab_quiz:
     quiz.show()
