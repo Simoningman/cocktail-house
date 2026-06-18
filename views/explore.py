@@ -268,7 +268,6 @@ def _render_detail(state_key="selected_id_all"):
 
     st.markdown("<div style='margin-top:8px'></div>", unsafe_allow_html=True)
     glass_svg = get_glass_svg(c["glass"])
-    st.markdown(f"<div style='font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:#8a7f6e'>{c['spirit_label']}</div>", unsafe_allow_html=True)
     st.markdown(
         f"<div style='display:flex;align-items:center;gap:16px;margin:8px 0 4px'>"
         f"<div>{glass_svg}</div>"

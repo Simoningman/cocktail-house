@@ -9,10 +9,11 @@ SPIRITS = {
     "rum":     "Rum",
     "tequila": "Tequila",
     "whiskey": "Whiskey",
+    "other":   "Other",
 }
 
 FLAVORS = [
-    "sour", "sweet", "bitter", "strong", "fresh",
+    "sour", "sweet", "bitter", "strong", "fresh", "creamy",
 ]
 
 COCKTAILS = [
@@ -42,7 +43,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Mojito originates from Cuba and was one of Ernest Hemingway's favourite drinks. 'Muddling' means gently pressing herbs to release their oils — without tearing them apart.",
         "tip": 'Always use freshly squeezed lime — bottled juice kills the whole point of this drink!',
-        "flavor_profile": {"Sour": 75, "Sweet": 50, "Bitter": 10, "Strong": 45, "Fresh": 90},
+        "flavor_profile": {"Sour": 75, "Sweet": 50, "Bitter": 10, "Strong": 45, "Fresh": 90, "Creamy": 0},
     },
     {
         "id": 2,
@@ -69,7 +70,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Old Fashioned is one of the world's oldest cocktails — the recipe dates back to the 1880s. Originally just whiskey, sugar, water and bitters. Hence the name 'the old-fashioned way'.",
         "tip": 'Large ice cube = slower dilution = better drink. Invest in a large cube ice tray!',
-        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 45, "Strong": 95, "Fresh": 10},
+        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 45, "Strong": 95, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 3,
@@ -95,7 +96,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Aperol Spritz follows the Italian '3-2-1 rule': 3 parts prosecco, 2 parts Aperol, 1 part soda water. Aperol contains orange, rhubarb and gentian root.",
         "tip": 'Always pour the prosecco first — if you pour Aperol into an empty glass first, you lose half the bubbles instantly!',
-        "flavor_profile": {"Sour": 20, "Sweet": 45, "Bitter": 70, "Strong": 25, "Fresh": 60},
+        "flavor_profile": {"Sour": 20, "Sweet": 45, "Bitter": 70, "Strong": 25, "Fresh": 60, "Creamy": 0},
     },
     {
         "id": 4,
@@ -122,7 +123,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Margarita is the best-selling cocktail in the USA. Triple Sec is an orange liqueur that balances the lime's acidity with sweetness. The original name was 'Daisy' — Spanish for margarita.",
         "tip": 'Try Tajín (Mexican chili-salt) on the rim instead of regular salt for a spicy twist!',
-        "flavor_profile": {"Sour": 85, "Sweet": 30, "Bitter": 15, "Strong": 60, "Fresh": 55},
+        "flavor_profile": {"Sour": 85, "Sweet": 30, "Bitter": 15, "Strong": 60, "Fresh": 55, "Creamy": 0},
     },
     {
         "id": 5,
@@ -149,7 +150,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Cosmopolitan gained its popularity from the TV series Sex and the City in the 90s. The pink colour comes from the cranberry juice. Shake long enough — the glass surface should be ice cold!',
         "tip": 'Flame the orange peel: hold it over the drink and ignite with a lighter. The oil catches fire for a second and gives a fantastic flavour!',
-        "flavor_profile": {"Sour": 55, "Sweet": 40, "Bitter": 50, "Strong": 75, "Fresh": 45},
+        "flavor_profile": {"Sour": 55, "Sweet": 40, "Bitter": 50, "Strong": 75, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 6,
@@ -175,7 +176,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Negroni was invented in 1919 in Florence by Count Camillo Negroni, who wanted his Americano with gin instead of soda water. The 1:1:1 ratio makes it simple to remember and almost impossible to get wrong!',
         "tip": 'Vermouth is a wine — store it in the fridge after opening and replace it after 1–2 months. Old vermouth ruins the whole drink!',
-        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 90, "Strong": 75, "Fresh": 15},
+        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 90, "Strong": 75, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 7,
@@ -200,7 +201,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Daiquiri is bartending's 'fundamental exercise' — if you can balance a Daiquiri, you can balance almost anything. The formula spirit-sour-sweet (2:1:0.75) is the foundation of countless cocktails.",
         "tip": 'Double strain = strain through the shaker strainer AND an extra fine mesh strainer. It gives a silky, creamy texture.',
-        "flavor_profile": {"Sour": 85, "Sweet": 45, "Bitter": 5, "Strong": 65, "Fresh": 40},
+        "flavor_profile": {"Sour": 85, "Sweet": 45, "Bitter": 5, "Strong": 65, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 8,
@@ -226,7 +227,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Moscow Mule was invented in 1941 in Hollywood by three businessmen who wanted to sell vodka, ginger beer and copper mugs. The copper mug isn't just aesthetic — copper conducts heat quickly, keeping the drink colder for longer!",
         "tip": 'Ginger beer ≠ Ginger ale! Ginger beer is spicier and gives the characteristic ginger burn. Fever-Tree and Bundaberg are popular brands.',
-        "flavor_profile": {"Sour": 50, "Sweet": 35, "Bitter": 15, "Strong": 60, "Fresh": 88},
+        "flavor_profile": {"Sour": 50, "Sweet": 35, "Bitter": 15, "Strong": 60, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 9,
@@ -250,7 +251,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The G&T was invented by British soldiers in India who mixed their anti-malarial quinine tonic with gin to make it more palatable.',
         "tip": 'Use a premium tonic like Fever-Tree — it makes an enormous difference.',
-        "flavor_profile": {"Sour": 20, "Sweet": 15, "Bitter": 80, "Strong": 50, "Fresh": 88},
+        "flavor_profile": {"Sour": 20, "Sweet": 15, "Bitter": 80, "Strong": 50, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 10,
@@ -278,7 +279,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Espresso Martini was created in the 1980s by Dick Bradsell in London when a model asked him for something to 'wake me up and f*** me up'.",
         "tip": 'Shake harder than you think necessary — the crema on top comes from vigorous shaking, not the espresso alone.',
-        "flavor_profile": {"Sour": 10, "Sweet": 70, "Bitter": 50, "Strong": 55, "Fresh": 15},
+        "flavor_profile": {"Sour": 10, "Sweet": 70, "Bitter": 50, "Strong": 55, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 11,
@@ -305,7 +306,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Paloma outsells the Margarita in Mexico. 'Paloma' means dove in Spanish. It's the most popular tequila drink in its home country.",
         "tip": 'Jarritos grapefruit soda is the authentic choice, but Fever-Tree grapefruit tonic works beautifully too.',
-        "flavor_profile": {"Sour": 65, "Sweet": 35, "Bitter": 45, "Strong": 50, "Fresh": 85},
+        "flavor_profile": {"Sour": 65, "Sweet": 35, "Bitter": 45, "Strong": 50, "Fresh": 85, "Creamy": 0},
     },
     {
         "id": 12,
@@ -332,7 +333,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Tom Collins dates to the 1870s and was famously named after a 19th-century hoax where people claimed a man named Tom Collins was spreading rumours about them.',
         "tip": "Don't shake too hard — you want to keep some fizz when the soda goes in.",
-        "flavor_profile": {"Sour": 65, "Sweet": 40, "Bitter": 15, "Strong": 50, "Fresh": 80},
+        "flavor_profile": {"Sour": 65, "Sweet": 40, "Bitter": 15, "Strong": 50, "Fresh": 80, "Creamy": 0},
     },
     {
         "id": 13,
@@ -357,7 +358,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Dark & Stormy is one of the few cocktails with a trademark — Gosling's owns the name when made with their rum. The dramatic layered look comes from floating the dark rum on top.",
         "tip": 'Float the rum for the visual effect, then stir before drinking for the best flavour.',
-        "flavor_profile": {"Sour": 30, "Sweet": 55, "Bitter": 15, "Strong": 65, "Fresh": 50},
+        "flavor_profile": {"Sour": 30, "Sweet": 55, "Bitter": 15, "Strong": 65, "Fresh": 50, "Creamy": 0},
     },
     {
         "id": 14,
@@ -384,7 +385,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Sex on the Beach was created in Florida in 1987 by a bartender promoting peach schnapps. The name was a marketing gimmick that stuck permanently.',
         "tip": 'Pour the cranberry slowly over the back of a spoon for a beautiful sunrise gradient.',
-        "flavor_profile": {"Sour": 20, "Sweet": 85, "Bitter": 5, "Strong": 40, "Fresh": 40},
+        "flavor_profile": {"Sour": 20, "Sweet": 85, "Bitter": 5, "Strong": 40, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 15,
@@ -410,7 +411,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Adding egg white creates a silky foam called a 'New York Sour' style. The dry shake emulsifies the egg white before dilution — it's the same technique used in fine dining.",
         "tip": "The egg white is optional but transforms the texture completely. Use pasteurised egg white if you're concerned about raw eggs.",
-        "flavor_profile": {"Sour": 85, "Sweet": 40, "Bitter": 45, "Strong": 70, "Fresh": 45},
+        "flavor_profile": {"Sour": 85, "Sweet": 40, "Bitter": 45, "Strong": 70, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 16,
@@ -436,7 +437,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The modern Amaretto Sour was popularised by cocktail writer Jeffrey Morgenthaler, who added bourbon and egg white to elevate what was considered a sugary, low-quality drink.',
         "tip": "The bourbon balances the sweetness of amaretto — don't skip it even if it seems unusual.",
-        "flavor_profile": {"Sour": 60, "Sweet": 75, "Bitter": 30, "Strong": 50, "Fresh": 35},
+        "flavor_profile": {"Sour": 60, "Sweet": 75, "Bitter": 30, "Strong": 50, "Fresh": 35, "Creamy": 0},
     },
     {
         "id": 17,
@@ -462,7 +463,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Tequila Sunrise was popularised in the 1970s by the Rolling Stones, who reportedly drank it throughout their 1972 US tour. The red-to-orange gradient mimics a sunrise.',
         "tip": 'The grenadine must be poured last and never stirred — the density difference creates the iconic layered effect.',
-        "flavor_profile": {"Sour": 15, "Sweet": 80, "Bitter": 5, "Strong": 50, "Fresh": 25},
+        "flavor_profile": {"Sour": 15, "Sweet": 80, "Bitter": 5, "Strong": 50, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 18,
@@ -487,7 +488,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Harvey Wallbanger was invented in the 1950s and named after a California surfer called Harvey who, after losing a surf competition, consoled himself with so many of these drinks he kept banging into walls.',
         "tip": 'Galliano is a vanilla-anise Italian liqueur — its unique herbal sweetness is what separates this from a plain Screwdriver.',
-        "flavor_profile": {"Sour": 15, "Sweet": 90, "Bitter": 10, "Strong": 55, "Fresh": 25},
+        "flavor_profile": {"Sour": 15, "Sweet": 90, "Bitter": 10, "Strong": 55, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 19,
@@ -513,7 +514,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Sidecar was invented in Paris around 1920 and is one of the original IBA cocktails. It belongs to the same sour family as the Margarita and Daiquiri — spirit, citrus, orange liqueur.',
         "tip": 'Cognac is the classic base but bourbon works equally well for a more American take.',
-        "flavor_profile": {"Sour": 70, "Sweet": 35, "Bitter": 20, "Strong": 75, "Fresh": 40},
+        "flavor_profile": {"Sour": 70, "Sweet": 35, "Bitter": 20, "Strong": 75, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 20,
@@ -540,7 +541,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Trader Vic created the Mai Tai in 1944. He served it to friends from Tahiti who exclaimed 'Mai Tai — Roa Ae!' meaning 'Out of this world — the best!' Orgeat is a sweet almond syrup essential to the authentic recipe.",
         "tip": 'Orgeat is non-negotiable — it gives the Mai Tai its distinctive nutty sweetness. Find it at specialty cocktail shops.',
-        "flavor_profile": {"Sour": 45, "Sweet": 50, "Bitter": 10, "Strong": 85, "Fresh": 55},
+        "flavor_profile": {"Sour": 45, "Sweet": 50, "Bitter": 10, "Strong": 85, "Fresh": 55, "Creamy": 0},
     },
     {
         "id": 21,
@@ -567,7 +568,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Penicillin was created in 2005 at Milk & Honey in New York by Sam Ross. It's considered one of the most important modern classic cocktails ever created.",
         "tip": 'The float of peaty Islay Scotch hits your nose first — use Laphroaig or Ardbeg for maximum smoke.',
-        "flavor_profile": {"Sour": 30, "Sweet": 35, "Bitter": 50, "Strong": 90, "Fresh": 10},
+        "flavor_profile": {"Sour": 30, "Sweet": 35, "Bitter": 50, "Strong": 90, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 22,
@@ -593,7 +594,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The White Russian became iconic after 'The Big Lebowski' (1998), where The Dude drinks them throughout the film. Without cream it's a Black Russian.",
         "tip": 'Use full-fat cream for the best float. Half-and-half also works but gives a thinner texture.',
-        "flavor_profile": {"Sour": 5, "Sweet": 75, "Bitter": 30, "Strong": 65, "Fresh": 5},
+        "flavor_profile": {"Sour": 5, "Sweet": 75, "Bitter": 30, "Strong": 65, "Fresh": 5, "Creamy": 0},
     },
     {
         "id": 23,
@@ -618,7 +619,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The original Gimlet used Rose's lime cordial (sweetened preserved lime juice), not fresh lime. The modern fresh-lime version is considered superior by most bartenders today.",
         "tip": 'A 2:3:4 ratio (syrup:lime:gin) is the classic balance — adjust sweetness to your taste.',
-        "flavor_profile": {"Sour": 40, "Sweet": 40, "Bitter": 15, "Strong": 65, "Fresh": 45},
+        "flavor_profile": {"Sour": 40, "Sweet": 40, "Bitter": 15, "Strong": 65, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 24,
@@ -644,7 +645,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Jungle Bird was created in 1978 at the Kuala Lumpur Hilton. It's unusual for using Campari in a tiki drink — the bitterness perfectly balances the sweet pineapple.",
         "tip": 'Use a full-flavoured dark rum like Appleton Estate — the molasses notes work perfectly with Campari.',
-        "flavor_profile": {"Sour": 45, "Sweet": 65, "Bitter": 55, "Strong": 65, "Fresh": 40},
+        "flavor_profile": {"Sour": 45, "Sweet": 65, "Bitter": 55, "Strong": 65, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 25,
@@ -671,7 +672,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Clover Club pre-dates Prohibition (1880s-1910s) and is one of the oldest gin cocktails. It was named after a men's literary club in Philadelphia.",
         "tip": 'Make raspberry syrup by simmering equal parts raspberries, sugar and water, then straining.',
-        "flavor_profile": {"Sour": 65, "Sweet": 55, "Bitter": 10, "Strong": 55, "Fresh": 65},
+        "flavor_profile": {"Sour": 65, "Sweet": 55, "Bitter": 10, "Strong": 55, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 26,
@@ -697,7 +698,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Between the Sheets is a 1930s cocktail similar to the Sidecar but with rum replacing some of the cognac. The provocative name was common for cocktails in the Prohibition era.',
         "tip": 'The equal parts ratio makes it very easy to remember and scale up for batches.',
-        "flavor_profile": {"Sour": 50, "Sweet": 45, "Bitter": 10, "Strong": 85, "Fresh": 35},
+        "flavor_profile": {"Sour": 50, "Sweet": 45, "Bitter": 10, "Strong": 85, "Fresh": 35, "Creamy": 0},
     },
     {
         "id": 27,
@@ -724,7 +725,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The French 75 is named after the French 75mm field gun used in WWI — the drink was said to hit with the same kick. It was served at Harry's Bar in Paris from the 1920s.",
         "tip": 'Chill your champagne flute before serving — warm bubbles go flat fast.',
-        "flavor_profile": {"Sour": 55, "Sweet": 30, "Bitter": 15, "Strong": 50, "Fresh": 82},
+        "flavor_profile": {"Sour": 55, "Sweet": 30, "Bitter": 15, "Strong": 50, "Fresh": 82, "Creamy": 0},
     },
     {
         "id": 28,
@@ -749,7 +750,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Piña Colada is Puerto Rico's national drink. 'Piña Colada' means 'strained pineapple'. It was created in 1954 at the Caribe Hilton in San Juan.",
         "tip": "Coconut cream (not coconut milk) is essential — it's much richer. Coco López is the classic brand.",
-        "flavor_profile": {"Sour": 10, "Sweet": 90, "Bitter": 5, "Strong": 50, "Fresh": 25},
+        "flavor_profile": {"Sour": 10, "Sweet": 90, "Bitter": 5, "Strong": 50, "Fresh": 25, "Creamy": 80},
     },
     {
         "id": 29,
@@ -774,7 +775,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The vivid blue colour comes entirely from blue curaçao, which is orange liqueur with added blue dye. It contains the same flavour as triple sec — purely the colour differs.',
         "tip": 'The colour is the star — serve in a clear glass and let the blue shine.',
-        "flavor_profile": {"Sour": 30, "Sweet": 80, "Bitter": 10, "Strong": 55, "Fresh": 40},
+        "flavor_profile": {"Sour": 30, "Sweet": 80, "Bitter": 10, "Strong": 55, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 30,
@@ -800,7 +801,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Aviation dates to 1916 and its sky-blue colour from crème de violette was revolutionary. The violette liqueur disappeared for decades, making this cocktail impossible to make authentically until Rothman & Winter reintroduced it in 2007.',
         "tip": 'Crème de violette is very potent — use sparingly or it overwhelms everything else.',
-        "flavor_profile": {"Sour": 60, "Sweet": 35, "Bitter": 20, "Strong": 65, "Fresh": 55},
+        "flavor_profile": {"Sour": 60, "Sweet": 35, "Bitter": 20, "Strong": 65, "Fresh": 55, "Creamy": 0},
     },
     {
         "id": 31,
@@ -829,7 +830,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Created by Donn Beach in 1934, the Zombie was so strong he limited customers to two per visit. It was the original 'dangerous' cocktail — designed to 'creep up on you like the living dead'.",
         "tip": "Falernum is a sweet syrup of lime, ginger and almond — it's the secret weapon in many tiki drinks.",
-        "flavor_profile": {"Sour": 50, "Sweet": 50, "Bitter": 20, "Strong": 95, "Fresh": 40},
+        "flavor_profile": {"Sour": 50, "Sweet": 50, "Bitter": 20, "Strong": 95, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 32,
@@ -854,7 +855,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Swapping Campari for Aperol in a Negroni creates a lighter, less bitter version. It's sometimes called a 'Naked and Famous' variation — perfect for those new to bitter cocktails.",
         "tip": 'Aperol has half the alcohol of Campari so this drinks noticeably lighter — great as an intro to Negronis.',
-        "flavor_profile": {"Sour": 10, "Sweet": 45, "Bitter": 65, "Strong": 70, "Fresh": 40},
+        "flavor_profile": {"Sour": 10, "Sweet": 45, "Bitter": 65, "Strong": 70, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 33,
@@ -880,7 +881,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Venetian Spritz predates the Aperol Spritz and uses Select or Campari for a more bitter, sophisticated flavour. The olive garnish is a distinctly Venetian touch.',
         "tip": 'Select Aperitivo is the authentic Venetian spirit — more complex than Aperol but harder to find outside Italy.',
-        "flavor_profile": {"Sour": 20, "Sweet": 35, "Bitter": 85, "Strong": 25, "Fresh": 65},
+        "flavor_profile": {"Sour": 20, "Sweet": 35, "Bitter": 85, "Strong": 25, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 34,
@@ -905,7 +906,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Paper Plane was created in 2008 by Sam Ross and is a perfect equal-parts cocktail. Named after M.I.A.'s song, it's become one of the defining cocktails of the modern era.",
         "tip": 'Equal parts makes it foolproof — 20ml of each is the standard but any equal measure works.',
-        "flavor_profile": {"Sour": 60, "Sweet": 45, "Bitter": 65, "Strong": 65, "Fresh": 35},
+        "flavor_profile": {"Sour": 60, "Sweet": 45, "Bitter": 65, "Strong": 65, "Fresh": 35, "Creamy": 0},
     },
     {
         "id": 35,
@@ -929,14 +930,14 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Last Word dates to the Detroit Athletic Club during Prohibition (1920s). It disappeared for decades until Ted Saucier published it in 1951. Green Chartreuse is made by monks in France from 130 herbs.',
         "tip": "Green Chartreuse is one of the most complex spirits in the world — at 55% ABV it's powerful, so the equal-parts balance is essential.",
-        "flavor_profile": {"Sour": 35, "Sweet": 40, "Bitter": 35, "Strong": 70, "Fresh": 30},
+        "flavor_profile": {"Sour": 35, "Sweet": 40, "Bitter": 35, "Strong": 70, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 36,
         "name": 'Naked and Famous',
         "emoji": '⭐',
-        "spirit": 'whiskey',
-        "spirit_label": 'Whiskey / Bourbon',
+        "spirit": 'other',
+        "spirit_label": 'Other',
         "flavors": ['smoky', 'bitter', 'sweet', 'complex'],
         "difficulty": 'Easy',
         "glass": 'Coupe glass',
@@ -953,7 +954,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Naked and Famous is a riff on the Last Word, replacing gin with mezcal and green Chartreuse with yellow. Created by Phil Ward at Death & Co in 2011.',
         "tip": "The smokiness of mezcal transforms the cocktail completely — choose a lightly smoked mezcal so it doesn't overpower.",
-        "flavor_profile": {"Sour": 35, "Sweet": 40, "Bitter": 35, "Strong": 70, "Fresh": 30},
+        "flavor_profile": {"Sour": 35, "Sweet": 40, "Bitter": 35, "Strong": 70, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 37,
@@ -978,7 +979,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Bee's Knees dates to Prohibition when honey and lemon were used to mask the harsh taste of bathtub gin. 'Bee's knees' was 1920s slang for 'excellent'.",
         "tip": 'Make honey syrup rather than using raw honey — it integrates much more smoothly in cold cocktails.',
-        "flavor_profile": {"Sour": 35, "Sweet": 65, "Bitter": 10, "Strong": 65, "Fresh": 40},
+        "flavor_profile": {"Sour": 35, "Sweet": 65, "Bitter": 10, "Strong": 65, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 38,
@@ -1004,7 +1005,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Corpse Reviver #2 is a classic hangover cure from the 1930 Savoy Cocktail Book. Harry Craddock warned: 'Four of these taken in swift succession will unrevive the corpse again.'",
         "tip": 'The absinthe rinse adds aroma without overwhelming bitterness — the key is to coat the glass and pour out the excess.',
-        "flavor_profile": {"Sour": 30, "Sweet": 30, "Bitter": 40, "Strong": 80, "Fresh": 20},
+        "flavor_profile": {"Sour": 30, "Sweet": 30, "Bitter": 40, "Strong": 80, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 39,
@@ -1030,7 +1031,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'A Fizz is any sour-style cocktail topped with soda water. The Ramos Gin Fizz, invented in New Orleans in 1888, is shaken for a full 12 minutes to create its legendary foam.',
         "tip": 'Pour soda water very slowly down the inside of the glass — it lifts the egg white foam to create a dramatic head.',
-        "flavor_profile": {"Sour": 30, "Sweet": 30, "Bitter": 40, "Strong": 65, "Fresh": 20},
+        "flavor_profile": {"Sour": 30, "Sweet": 30, "Bitter": 40, "Strong": 65, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 40,
@@ -1053,7 +1054,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Gold Rush was created at Milk & Honey in New York around 2000. It's essentially a Bee's Knees with bourbon replacing gin — both drinks show how honey syrup elevates a classic sour.",
         "tip": "The quality of your bourbon matters a lot here — use something you'd sip neat.",
-        "flavor_profile": {"Sour": 35, "Sweet": 55, "Bitter": 10, "Strong": 75, "Fresh": 40},
+        "flavor_profile": {"Sour": 35, "Sweet": 55, "Bitter": 10, "Strong": 75, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 41,
@@ -1078,7 +1079,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Replacing gin with mezcal in a Negroni adds smokiness that pairs beautifully with Campari's bitterness. It's one of the most popular modern Negroni variations.",
         "tip": 'Choose a mezcal with medium smokiness — overly peaty mezcal can dominate everything else.',
-        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 80, "Strong": 80, "Fresh": 15},
+        "flavor_profile": {"Sour": 10, "Sweet": 35, "Bitter": 80, "Strong": 80, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 42,
@@ -1104,7 +1105,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Rum Sour is one of the simplest applications of the sour template. Dark rum brings molasses and caramel notes that create a richer sour than white rum would.',
         "tip": "Dark Jamaican rum like Appleton or Myers's works best here — the flavour stands up to the citrus.",
-        "flavor_profile": {"Sour": 75, "Sweet": 45, "Bitter": 10, "Strong": 60, "Fresh": 30},
+        "flavor_profile": {"Sour": 75, "Sweet": 45, "Bitter": 10, "Strong": 60, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 43,
@@ -1131,7 +1132,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Southside is essentially a Mojito served up in a coupe instead of a highball. It was supposedly a favourite of Al Capone during Prohibition — made with mint to mask the poor quality gin.',
         "tip": "Fine strain carefully — you don't want mint fragments in the final drink.",
-        "flavor_profile": {"Sour": 50, "Sweet": 40, "Bitter": 10, "Strong": 60, "Fresh": 70},
+        "flavor_profile": {"Sour": 50, "Sweet": 40, "Bitter": 10, "Strong": 60, "Fresh": 70, "Creamy": 0},
     },
     {
         "id": 44,
@@ -1157,7 +1158,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Bamboo was created in the 1890s in Yokohama, Japan by bartender Louis Eppinger. At only 15% ABV it was considered a 'low-ABV' cocktail over 130 years before the trend existed.",
         "tip": 'Use a quality Fino sherry — it brings a nutty, saline depth that makes this cocktail extraordinary.',
-        "flavor_profile": {"Sour": 10, "Sweet": 20, "Bitter": 75, "Strong": 30, "Fresh": 55},
+        "flavor_profile": {"Sour": 10, "Sweet": 20, "Bitter": 75, "Strong": 30, "Fresh": 55, "Creamy": 0},
     },
     {
         "id": 45,
@@ -1183,7 +1184,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Remember the Maine was created in 1933 by Charles H. Baker Jr. A riff on the Manhattan, it adds Cherry Heering and absinthe for extraordinary complexity.',
         "tip": 'Rye whiskey is essential — its spiciness cuts through the sweetness of Cherry Heering perfectly.',
-        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 55, "Strong": 90, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 55, "Strong": 90, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 46,
@@ -1208,7 +1209,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Manhattan is one of the original six 'basic' cocktails. It was supposedly invented in the early 1870s at the Manhattan Club in New York, possibly for a party hosted by Winston Churchill's mother.",
         "tip": 'A Manhattan must be stirred, not shaken — shaking adds air bubbles and dilutes it unevenly, ruining the silky texture.',
-        "flavor_profile": {"Sour": 5, "Sweet": 50, "Bitter": 40, "Strong": 80, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 50, "Bitter": 40, "Strong": 80, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 47,
@@ -1235,7 +1236,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Mint Julep is the official drink of the Kentucky Derby since 1938. About 120,000 Mint Juleps are served over the two-day racing event each year.',
         "tip": 'The silver cup conducts cold perfectly — frost on the outside means the drink is at the perfect temperature.',
-        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 10, "Strong": 80, "Fresh": 88},
+        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 10, "Strong": 80, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 48,
@@ -1263,7 +1264,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Vieux Carré (French for 'Old Square') was created at the Carousel Bar in New Orleans' French Quarter in the 1930s. It combines American whiskey and French cognac — a transatlantic handshake in a glass.",
         "tip": 'Bénédictine is a French herbal liqueur made by monks — a tiny amount adds enormous depth.',
-        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 50, "Strong": 90, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 50, "Strong": 90, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 49,
@@ -1288,7 +1289,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Vesper was invented by Ian Fleming in Casino Royale (1953) and ordered by James Bond. Fleming specified: 'Shaken, not stirred.' Named after the double agent Vesper Lynd.",
         "tip": "Fleming's original recipe used Kina Lillet, now discontinued. Lillet Blanc is the closest substitute available today.",
-        "flavor_profile": {"Sour": 5, "Sweet": 10, "Bitter": 30, "Strong": 90, "Fresh": 25},
+        "flavor_profile": {"Sour": 5, "Sweet": 10, "Bitter": 30, "Strong": 90, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 50,
@@ -1315,7 +1316,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Swapping bourbon for aged rum in an Old Fashioned creates a tropical depth from molasses and vanilla barrel notes. Demerara sugar (raw cane sugar) pairs particularly well with rum.',
         "tip": 'Use Plantation XO, Appleton 12 or El Dorado 15 for best results — aged complexity is key.',
-        "flavor_profile": {"Sour": 5, "Sweet": 50, "Bitter": 40, "Strong": 85, "Fresh": 15},
+        "flavor_profile": {"Sour": 5, "Sweet": 50, "Bitter": 40, "Strong": 85, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 51,
@@ -1339,7 +1340,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Blood and Sand was created in 1922 to celebrate the Rudolf Valentino film of the same name. It's one of the rare equal-parts cocktails that uses fresh juice — the orange softens the Scotch beautifully.",
         "tip": 'Use a smoky blended Scotch — the smokiness cuts through the sweetness of Cherry Heering.',
-        "flavor_profile": {"Sour": 30, "Sweet": 55, "Bitter": 20, "Strong": 65, "Fresh": 45},
+        "flavor_profile": {"Sour": 30, "Sweet": 55, "Bitter": 20, "Strong": 65, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 52,
@@ -1363,7 +1364,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Garibaldi was popularised by Dante bar in New York. The 'fluffy' orange juice — blended briefly to aerate it — is the secret. It creates a completely different texture from regular squeezed juice.",
         "tip": 'Blend the orange juice for 10 seconds before adding — it transforms the texture completely.',
-        "flavor_profile": {"Sour": 25, "Sweet": 35, "Bitter": 70, "Strong": 55, "Fresh": 30},
+        "flavor_profile": {"Sour": 25, "Sweet": 35, "Bitter": 70, "Strong": 55, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 53,
@@ -1389,7 +1390,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Horse's Neck was originally a non-alcoholic drink in the 1890s — just ginger ale and lemon. Bourbon was added later. The dramatic lemon peel garnish is what defines this drink visually.",
         "tip": 'A Y-peeler makes the long spiral garnish much easier — start at the top and rotate the lemon slowly.',
-        "flavor_profile": {"Sour": 20, "Sweet": 50, "Bitter": 65, "Strong": 55, "Fresh": 30},
+        "flavor_profile": {"Sour": 20, "Sweet": 50, "Bitter": 65, "Strong": 55, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 54,
@@ -1415,7 +1416,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Created by Douglas Ankrah in London in 2002. Originally called 'Maverick Martini', the name was changed when a customer said it was 'so good it should be pornographic'. The side Prosecco shot is served to cleanse the palate.",
         "tip": 'Use real passion fruit, not just the liqueur — the seeds and pulp add texture and authenticity.',
-        "flavor_profile": {"Sour": 30, "Sweet": 80, "Bitter": 5, "Strong": 50, "Fresh": 15},
+        "flavor_profile": {"Sour": 30, "Sweet": 80, "Bitter": 5, "Strong": 50, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 55,
@@ -1441,7 +1442,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Hugo Spritz originated in South Tyrol, Italy around 2005, invented by bartender Roland Gruber. It's now hugely popular across Northern Italy and Germany as a lighter alternative to the Aperol Spritz.",
         "tip": 'St-Germain elderflower liqueur is superior to cordial if you can find it — it adds a sophisticated floral depth.',
-        "flavor_profile": {"Sour": 10, "Sweet": 45, "Bitter": 10, "Strong": 15, "Fresh": 90},
+        "flavor_profile": {"Sour": 10, "Sweet": 45, "Bitter": 10, "Strong": 15, "Fresh": 90, "Creamy": 0},
     },
     {
         "id": 56,
@@ -1464,7 +1465,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Kir was named after Félix Kir, the Mayor of Dijon who popularised it after WWII. The Royale version replaces still white wine with Champagne. 'Crème de cassis' must legally contain 400g of sugar per litre.",
         "tip": "Pour Champagne slowly to preserve the bubbles — the cassis is already at the bottom so they'll mix naturally.",
-        "flavor_profile": {"Sour": 15, "Sweet": 50, "Bitter": 10, "Strong": 18, "Fresh": 65},
+        "flavor_profile": {"Sour": 15, "Sweet": 50, "Bitter": 10, "Strong": 18, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 57,
@@ -1492,7 +1493,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Sazerac is arguably the world's first cocktail, originating in New Orleans in the 1830s. Peychaud's bitters were invented by a Creole apothecary — they're unique to this drink and unlike any other bitters.",
         "tip": 'The lemon peel is expressed but not added — purists insist this is non-negotiable. The oils season the drink without adding citrus flavour.',
-        "flavor_profile": {"Sour": 5, "Sweet": 25, "Bitter": 50, "Strong": 95, "Fresh": 15},
+        "flavor_profile": {"Sour": 5, "Sweet": 25, "Bitter": 50, "Strong": 95, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 58,
@@ -1518,7 +1519,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Toronto features Fernet-Branca, the intensely bitter Italian amaro beloved by bartenders worldwide. It's said that if you order a Fernet-Branca at a bar, the bartender will often join you for a shot.",
         "tip": 'Fernet-Branca is extremely bitter — the tiny 7ml is intentional. Increase it only once you know how much you enjoy it.',
-        "flavor_profile": {"Sour": 5, "Sweet": 25, "Bitter": 85, "Strong": 80, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 25, "Bitter": 85, "Strong": 80, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 59,
@@ -1543,7 +1544,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Dry Martini is one of the most debated cocktails in history — the ratio of gin to vermouth has varied from 1:1 in the 1890s to 50:1 by the 1960s. Winston Churchill reportedly just glanced at a bottle of vermouth across the room.',
         "tip": 'The key is temperature — stir for a full 40 seconds. A properly stirred Martini should be almost too cold to hold.',
-        "flavor_profile": {"Sour": 5, "Sweet": 8, "Bitter": 30, "Strong": 85, "Fresh": 25},
+        "flavor_profile": {"Sour": 5, "Sweet": 8, "Bitter": 30, "Strong": 85, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 60,
@@ -1568,7 +1569,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Created in the early 1900s by Ada Coleman, head bartender at the Savoy Hotel in London — one of the first famous female bartenders. Actor Charles Hawtrey tasted it and exclaimed 'By Jove! That's the real hanky-panky!'",
         "tip": 'This is a stirred cocktail only — shaking would cloud the vermouth and change the texture.',
-        "flavor_profile": {"Sour": 5, "Sweet": 40, "Bitter": 75, "Strong": 75, "Fresh": 15},
+        "flavor_profile": {"Sour": 5, "Sweet": 40, "Bitter": 75, "Strong": 75, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 61,
@@ -1598,7 +1599,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Created around 1915 at the Long Bar of Raffles Hotel in Singapore by bartender Ngiam Tong Boon. The original recipe was lost and rediscovered decades later in a 1930s diary.',
         "tip": 'This cocktail has many ingredients — prep all your measures before shaking to avoid mistakes.',
-        "flavor_profile": {"Sour": 30, "Sweet": 70, "Bitter": 15, "Strong": 45, "Fresh": 25},
+        "flavor_profile": {"Sour": 30, "Sweet": 70, "Bitter": 15, "Strong": 45, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 62,
@@ -1626,7 +1627,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Planter's Punch dates to 1908 and follows the classic Caribbean 'punch' formula: 'One sour, two sweet, three strong, four weak' — lime, grenadine, rum, soda water.",
         "tip": 'The formula 1:2:3:4 (lime:sugar:rum:soda) is a useful rule of thumb for any Caribbean punch.',
-        "flavor_profile": {"Sour": 40, "Sweet": 65, "Bitter": 5, "Strong": 55, "Fresh": 60},
+        "flavor_profile": {"Sour": 40, "Sweet": 65, "Bitter": 5, "Strong": 55, "Fresh": 60, "Creamy": 0},
     },
     {
         "id": 63,
@@ -1651,7 +1652,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Rob Roy is simply a Manhattan made with Scotch instead of rye or bourbon. Created in 1894 to celebrate the premiere of the operetta Rob Roy at the Waldorf Hotel in New York.',
         "tip": 'A smoky Scotch transforms this into a completely different drink from a Manhattan — try both and compare.',
-        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 50, "Strong": 85, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 50, "Strong": 85, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 64,
@@ -1680,14 +1681,14 @@ COCKTAILS = [
         ],
         "fun_fact": "Donn Beach created the Fog Cutter in 1947 with the warning: 'Fog cutter, hell. After two of these, you won't even see the stuff.' It combines three spirits — unusual even in tiki culture.",
         "tip": 'Orgeat is non-negotiable in most tiki drinks — its almond sweetness is the backbone of the category.',
-        "flavor_profile": {"Sour": 45, "Sweet": 50, "Bitter": 10, "Strong": 85, "Fresh": 20},
+        "flavor_profile": {"Sour": 45, "Sweet": 50, "Bitter": 10, "Strong": 85, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 65,
         "name": 'Mezcal Margarita',
         "emoji": '🌵',
-        "spirit": 'tequila',
-        "spirit_label": 'Tequila',
+        "spirit": 'other',
+        "spirit_label": 'Other',
         "flavors": ['smoky', 'sour', 'strong', 'citrus'],
         "difficulty": 'Easy',
         "glass": 'Rocks glass',
@@ -1706,7 +1707,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Mezcal is tequila's smoky cousin — both are made from agave, but mezcal can use any of over 30 agave varieties, while tequila uses only blue agave. The smoke comes from roasting agave hearts in underground pits.",
         "tip": 'Combine equal parts salt and chili powder for the rim — the heat plays beautifully against the smoky mezcal.',
-        "flavor_profile": {"Sour": 80, "Sweet": 25, "Bitter": 35, "Strong": 55, "Fresh": 45},
+        "flavor_profile": {"Sour": 80, "Sweet": 25, "Bitter": 35, "Strong": 55, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 66,
@@ -1733,7 +1734,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Created by Phil Ward at Death & Co in New York in 2007. It sparked an entire movement of mezcal-based cocktails in American bars and put artisanal mezcal on the map internationally.',
         "tip": "Mole bitters contain chocolate and chili — they're transformative in agave-based cocktails.",
-        "flavor_profile": {"Sour": 5, "Sweet": 38, "Bitter": 55, "Strong": 80, "Fresh": 15},
+        "flavor_profile": {"Sour": 5, "Sweet": 38, "Bitter": 55, "Strong": 80, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 67,
@@ -1760,7 +1761,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Created by Salvatore Calabrese at the Library Bar in London in 1996. He made it one morning after spreading marmalade on his toast and deciding to put it in a cocktail. The toast garnish is literal.',
         "tip": 'Use a fine-mesh strainer to catch any marmalade pieces — you want the flavour, not the chunks.',
-        "flavor_profile": {"Sour": 50, "Sweet": 62, "Bitter": 38, "Strong": 60, "Fresh": 25},
+        "flavor_profile": {"Sour": 50, "Sweet": 62, "Bitter": 38, "Strong": 60, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 68,
@@ -1786,7 +1787,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The copa glass (balloon glass) was introduced for G&Ts in the Basque region of Spain and became globally popular around 2010. Its shape concentrates the botanical aromas toward the nose.',
         "tip": "Hendrick's gin with its cucumber and rose notes is the natural partner for this drink.",
-        "flavor_profile": {"Sour": 15, "Sweet": 10, "Bitter": 28, "Strong": 55, "Fresh": 90},
+        "flavor_profile": {"Sour": 15, "Sweet": 10, "Bitter": 28, "Strong": 55, "Fresh": 90, "Creamy": 0},
     },
     {
         "id": 69,
@@ -1812,7 +1813,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Agave nectar is used instead of simple syrup to complement the agave-based tequila — it's a natural pairing. The chili on the foam provides a subtle warmth that builds as you drink.",
         "tip": 'Agave nectar is sweeter than simple syrup — use slightly less than you would sugar syrup.',
-        "flavor_profile": {"Sour": 72, "Sweet": 40, "Bitter": 10, "Strong": 52, "Fresh": 38},
+        "flavor_profile": {"Sour": 72, "Sweet": 40, "Bitter": 10, "Strong": 52, "Fresh": 38, "Creamy": 0},
     },
     {
         "id": 70,
@@ -1839,7 +1840,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Spicy Margarita became the world's most trending cocktail order in the 2010s. Capsaicin from jalapeños is oil-soluble — shaking with alcohol extracts its heat more efficiently than water would.",
         "tip": 'Remove jalapeño seeds for less heat, keep them for fire. Taste after muddling to adjust spice before shaking.',
-        "flavor_profile": {"Sour": 75, "Sweet": 25, "Bitter": 15, "Strong": 50, "Fresh": 25},
+        "flavor_profile": {"Sour": 75, "Sweet": 25, "Bitter": 15, "Strong": 50, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 71,
@@ -1864,7 +1865,7 @@ COCKTAILS = [
         ],
         "fun_fact": "A tropical riff on the classic Daiquiri, this drink proves that the sour template works with almost any fruit. Passion fruit's natural acidity means you need less lime juice than in a standard Daiquiri.",
         "tip": 'Fresh passion fruit pulp beats purée — scoop directly into the shaker for seeds and all.',
-        "flavor_profile": {"Sour": 65, "Sweet": 62, "Bitter": 5, "Strong": 55, "Fresh": 22},
+        "flavor_profile": {"Sour": 65, "Sweet": 62, "Bitter": 5, "Strong": 55, "Fresh": 22, "Creamy": 0},
     },
     {
         "id": 72,
@@ -1890,7 +1891,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The fruit Daiquiri is infinitely flexible — any ripe fruit works as the base. The key is balancing the fruit's natural sweetness and acidity against the lime and sugar.",
         "tip": 'Taste your strawberries first — riper ones need less syrup. Out-of-season strawberries may need a bit more sweetness.',
-        "flavor_profile": {"Sour": 65, "Sweet": 72, "Bitter": 5, "Strong": 50, "Fresh": 22},
+        "flavor_profile": {"Sour": 65, "Sweet": 72, "Bitter": 5, "Strong": 50, "Fresh": 22, "Creamy": 0},
     },
     {
         "id": 73,
@@ -1915,7 +1916,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Amaretto is an Italian almond liqueur made from bitter almonds or apricot kernels (which have a similar flavour). 'Amaro' means bitter in Italian, though modern Amaretto is quite sweet.",
         "tip": 'Prosecco adds elegance; soda water keeps it simple. Both work — choose based on the occasion.',
-        "flavor_profile": {"Sour": 22, "Sweet": 82, "Bitter": 8, "Strong": 28, "Fresh": 45},
+        "flavor_profile": {"Sour": 22, "Sweet": 82, "Bitter": 8, "Strong": 28, "Fresh": 45, "Creamy": 0},
     },
     {
         "id": 74,
@@ -1940,7 +1941,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Monte Carlo is essentially a Vieux Carré simplified — rye whiskey and Bénédictine with bitters. It's a great introduction to Bénédictine, the French herbal liqueur made by monks from 27 plants and spices.",
         "tip": 'Bénédictine has notes of honey, saffron and spice — a little goes a long way.',
-        "flavor_profile": {"Sour": 5, "Sweet": 42, "Bitter": 68, "Strong": 88, "Fresh": 12},
+        "flavor_profile": {"Sour": 5, "Sweet": 42, "Bitter": 68, "Strong": 88, "Fresh": 12, "Creamy": 0},
     },
     {
         "id": 75,
@@ -1967,7 +1968,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Sloe gin is a liqueur made by steeping sloe berries (blackthorn fruit) in gin with sugar. Traditional sloe gin was made at home in Britain for centuries — each family had their own recipe.',
         "tip": 'Plymouth Sloe Gin is the benchmark — look for a version with a deep red colour and a proper berry flavour, not just sweetness.',
-        "flavor_profile": {"Sour": 65, "Sweet": 38, "Bitter": 18, "Strong": 38, "Fresh": 65},
+        "flavor_profile": {"Sour": 65, "Sweet": 38, "Bitter": 18, "Strong": 38, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 76,
@@ -1998,7 +1999,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Long Island Iced Tea contains no tea — it's named after its colour. At 4-5 spirits at once it's one of the strongest classic cocktails. Created in the 1970s, possibly by Robert Butt in Long Island, New York.",
         "tip": 'Add very little cola — just enough for colour. Too much cola overwhelms the balance of the spirits.',
-        "flavor_profile": {"Sour": 42, "Sweet": 42, "Bitter": 10, "Strong": 95, "Fresh": 35},
+        "flavor_profile": {"Sour": 42, "Sweet": 42, "Bitter": 10, "Strong": 95, "Fresh": 35, "Creamy": 0},
     },
     {
         "id": 77,
@@ -2024,7 +2025,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Pisco Sour is the national cocktail of both Peru and Chile — the two countries have disputed its origin for over a century. The bitters on foam creates the signature decorative pattern.',
         "tip": 'Pisco is an unaged grape brandy — look for Peruvian Pisco Quebranta for the most traditional flavour.',
-        "flavor_profile": {"Sour": 82, "Sweet": 40, "Bitter": 18, "Strong": 62, "Fresh": 28},
+        "flavor_profile": {"Sour": 82, "Sweet": 40, "Bitter": 18, "Strong": 62, "Fresh": 28, "Creamy": 0},
     },
     {
         "id": 78,
@@ -2048,7 +2049,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'An equal parts cocktail invented at Death & Co in New York. Yellow Chartreuse (lower ABV than green) balances the smokiness of mezcal without overpowering. A masterclass in balance.',
         "tip": 'Equal parts means any jigger works — just use the same measure for all four.',
-        "flavor_profile": {"Sour": 58, "Sweet": 48, "Bitter": 58, "Strong": 65, "Fresh": 28},
+        "flavor_profile": {"Sour": 58, "Sweet": 48, "Bitter": 58, "Strong": 65, "Fresh": 28, "Creamy": 0},
     },
     {
         "id": 79,
@@ -2075,7 +2076,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Created in 2008 by Jörg Meyer at Le Lion bar in Hamburg. The Gin Basil Smash sparked an international smash cocktail trend and made Hamburg one of Europe's cocktail capitals.",
         "tip": 'Muddle basil firmly — unlike mint, basil benefits from vigorous muddling to extract maximum flavour.',
-        "flavor_profile": {"Sour": 65, "Sweet": 38, "Bitter": 8, "Strong": 58, "Fresh": 62},
+        "flavor_profile": {"Sour": 65, "Sweet": 38, "Bitter": 8, "Strong": 58, "Fresh": 62, "Creamy": 0},
     },
     {
         "id": 80,
@@ -2100,7 +2101,7 @@ COCKTAILS = [
         ],
         "fun_fact": "A Salty Dog is a Greyhound (vodka and grapefruit juice) with a salted rim. 'Salty dog' is old British naval slang for an experienced sailor — the salt represents sea spray.",
         "tip": "Fresh grapefruit juice makes an enormous difference — the bitterness and freshness can't be replicated from a carton.",
-        "flavor_profile": {"Sour": 42, "Sweet": 15, "Bitter": 68, "Strong": 52, "Fresh": 22},
+        "flavor_profile": {"Sour": 42, "Sweet": 15, "Bitter": 68, "Strong": 52, "Fresh": 22, "Creamy": 0},
     },
     {
         "id": 81,
@@ -2124,7 +2125,7 @@ COCKTAILS = [
         ],
         "fun_fact": "James Bond's 'shaken not stirred' Vodka Martini is technically wrong — shaking dilutes and aerates the drink, reducing its temperature and clarity. Most bartenders agree stirring gives superior results.",
         "tip": "The quality of the vodka is everything in this drink — there's nowhere to hide. Use the best you have.",
-        "flavor_profile": {"Sour": 5, "Sweet": 5, "Bitter": 25, "Strong": 85, "Fresh": 8},
+        "flavor_profile": {"Sour": 5, "Sweet": 5, "Bitter": 25, "Strong": 85, "Fresh": 8, "Creamy": 0},
     },
     {
         "id": 82,
@@ -2151,7 +2152,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Caribbean rum punch follows the rule 'one sour, two sweet, three strong, four weak' — it's the same formula used since the 1600s. The word 'punch' comes from the Hindi 'panch' meaning five, for the five original ingredients.",
         "tip": 'This scales perfectly for large batches — just multiply all measures and add to a punch bowl with ice.',
-        "flavor_profile": {"Sour": 38, "Sweet": 68, "Bitter": 5, "Strong": 55, "Fresh": 12},
+        "flavor_profile": {"Sour": 38, "Sweet": 68, "Bitter": 5, "Strong": 55, "Fresh": 12, "Creamy": 0},
     },
     {
         "id": 83,
@@ -2177,7 +2178,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Falernum is a Caribbean syrup made from lime, ginger, almond and cloves. It's been produced in Barbados since the 1700s and is the secret ingredient in many of the best tiki drinks.",
         "tip": "John D. Taylor's Velvet Falernum is the benchmark — it's an actual low-ABV liqueur rather than a syrup.",
-        "flavor_profile": {"Sour": 65, "Sweet": 52, "Bitter": 18, "Strong": 65, "Fresh": 18},
+        "flavor_profile": {"Sour": 65, "Sweet": 52, "Bitter": 18, "Strong": 65, "Fresh": 18, "Creamy": 0},
     },
     {
         "id": 84,
@@ -2205,7 +2206,7 @@ COCKTAILS = [
         ],
         "fun_fact": "A Whiskey Sour with a red wine float — the wine creates a vivid purple-and-gold layered effect. It's an American classic from the 1880s that disappeared and was rediscovered in the craft cocktail era.",
         "tip": 'Use a fruity red wine like Malbec or Shiraz — the fruitiness complements the whiskey beautifully.',
-        "flavor_profile": {"Sour": 72, "Sweet": 42, "Bitter": 28, "Strong": 68, "Fresh": 25},
+        "flavor_profile": {"Sour": 72, "Sweet": 42, "Bitter": 28, "Strong": 68, "Fresh": 25, "Creamy": 0},
     },
     {
         "id": 85,
@@ -2231,7 +2232,7 @@ COCKTAILS = [
         ],
         "fun_fact": "'Sbagliato' means 'mistaken' in Italian — the drink was supposedly created when a bartender accidentally grabbed a bottle of Prosecco instead of gin. The happy mistake became a classic.",
         "tip": 'Much lighter than a classic Negroni — perfect as an aperitif before dinner.',
-        "flavor_profile": {"Sour": 18, "Sweet": 42, "Bitter": 78, "Strong": 22, "Fresh": 58},
+        "flavor_profile": {"Sour": 18, "Sweet": 42, "Bitter": 78, "Strong": 22, "Fresh": 58, "Creamy": 0},
     },
     {
         "id": 86,
@@ -2258,7 +2259,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Collins family of cocktails (Tom Collins, John Collins, Rum Collins) all follow the same template. The Rum Collins is essentially a Mojito without mint — clean and refreshing.',
         "tip": "Don't shake too vigorously — a brief shake preserves more carbonation when the soda goes in.",
-        "flavor_profile": {"Sour": 68, "Sweet": 42, "Bitter": 5, "Strong": 52, "Fresh": 65},
+        "flavor_profile": {"Sour": 68, "Sweet": 42, "Bitter": 5, "Strong": 52, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 87,
@@ -2282,7 +2283,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Campari Soda is Italy's most popular single-spirit aperitivo. Campari was founded in Milan in 1860 — the iconic red colour originally came from carmine dye made from crushed insects. Today it uses artificial colouring.",
         "tip": 'The simplest drinks require the best ingredients — use quality soda water with good carbonation.',
-        "flavor_profile": {"Sour": 12, "Sweet": 32, "Bitter": 72, "Strong": 22, "Fresh": 65},
+        "flavor_profile": {"Sour": 12, "Sweet": 32, "Bitter": 72, "Strong": 22, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 88,
@@ -2308,7 +2309,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Cuba Libre — rum, cola and lime — was supposedly created in Havana in 1900 by American soldiers celebrating Cuba's independence. 'Cuba Libre' means 'Free Cuba'. The addition of lime is what separates it from a plain rum & cola.",
         "tip": 'Always add lime juice — it cuts the sweetness of the cola and gives the drink balance.',
-        "flavor_profile": {"Sour": 18, "Sweet": 78, "Bitter": 8, "Strong": 48, "Fresh": 22},
+        "flavor_profile": {"Sour": 18, "Sweet": 78, "Bitter": 8, "Strong": 48, "Fresh": 22, "Creamy": 0},
     },
     {
         "id": 89,
@@ -2332,7 +2333,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Vodka Soda is one of the lowest-calorie cocktails available — around 100 calories per serving. Its simplicity puts all focus on the vodka quality, making a premium vodka essential.',
         "tip": 'Use a flavoured vodka (citrus, cucumber, berry) to add interest without extra calories or sugar.',
-        "flavor_profile": {"Sour": 12, "Sweet": 5, "Bitter": 5, "Strong": 58, "Fresh": 88},
+        "flavor_profile": {"Sour": 12, "Sweet": 5, "Bitter": 5, "Strong": 58, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 90,
@@ -2360,7 +2361,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Gin Sling is the ancestor of the Singapore Sling. 'Sling' refers to a style of drink popular in 18th-century Britain — spirits sweetened and lengthened with water.",
         "tip": 'Cherry brandy adds fruit and colour — use a quality one like Cherry Heering rather than cheap cherry liqueur.',
-        "flavor_profile": {"Sour": 48, "Sweet": 52, "Bitter": 12, "Strong": 52, "Fresh": 68},
+        "flavor_profile": {"Sour": 48, "Sweet": 52, "Bitter": 12, "Strong": 52, "Fresh": 68, "Creamy": 0},
     },
     {
         "id": 91,
@@ -2385,7 +2386,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Brazil's national cocktail uses cachaça, a spirit distilled from fresh sugarcane juice (not molasses like most rum). Caipirinha means 'little countryside girl' in Portuguese.",
         "tip": 'Muddle the lime very firmly — you want juice from the flesh AND oils from the peel.',
-        "flavor_profile": {"Sour": 82, "Sweet": 48, "Bitter": 8, "Strong": 62, "Fresh": 32},
+        "flavor_profile": {"Sour": 82, "Sweet": 48, "Bitter": 8, "Strong": 62, "Fresh": 32, "Creamy": 0},
     },
     {
         "id": 92,
@@ -2409,7 +2410,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Tequila & Soda has become the low-calorie alternative to the Margarita. Blanco tequila's agave and citrus notes shine more clearly in soda than in tonic, making it surprisingly complex for such a simple drink.",
         "tip": 'High-quality blanco tequila makes this drink — the agave flavour is front and centre with nothing to hide it.',
-        "flavor_profile": {"Sour": 18, "Sweet": 5, "Bitter": 12, "Strong": 62, "Fresh": 88},
+        "flavor_profile": {"Sour": 18, "Sweet": 5, "Bitter": 12, "Strong": 62, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 93,
@@ -2436,7 +2437,7 @@ COCKTAILS = [
         ],
         "fun_fact": "St-Germain elderflower liqueur, launched in 2007, transformed the cocktail world. Often called 'bartender's ketchup' because it goes with almost everything — and because bartenders were putting it in every drink.",
         "tip": 'St-Germain is sweet — reduce or omit the simple syrup if using it.',
-        "flavor_profile": {"Sour": 48, "Sweet": 52, "Bitter": 8, "Strong": 45, "Fresh": 88},
+        "flavor_profile": {"Sour": 48, "Sweet": 52, "Bitter": 8, "Strong": 45, "Fresh": 88, "Creamy": 0},
     },
     {
         "id": 94,
@@ -2462,14 +2463,14 @@ COCKTAILS = [
         ],
         "fun_fact": 'The Rosé Spritz is a modern creation that combines the Spritz format with the rosé wine trend of the 2010s. The pink-on-pink colour combination became one of the most photographed drinks of the Instagram era.',
         "tip": "Use a Provence-style dry rosé — its subtle fruit and minerality pairs beautifully with Aperol's bitterness.",
-        "flavor_profile": {"Sour": 18, "Sweet": 52, "Bitter": 32, "Strong": 18, "Fresh": 82},
+        "flavor_profile": {"Sour": 18, "Sweet": 52, "Bitter": 32, "Strong": 18, "Fresh": 82, "Creamy": 0},
     },
     {
         "id": 95,
         "name": 'Angostura Sour',
         "emoji": '🍊',
-        "spirit": 'rum',
-        "spirit_label": 'Rum',
+        "spirit": 'other',
+        "spirit_label": 'Other',
         "flavors": ['bitter', 'spicy', 'citrus', 'complex'],
         "difficulty": 'Medium',
         "glass": 'Coupe glass',
@@ -2488,7 +2489,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Angostura bitters at 44.7% ABV is strong enough to be the base spirit in this cocktail. Created in Trinidad, this drink celebrates the Angostura distillery that has produced its iconic bitters since 1824.',
         "tip": 'This is one of the few cocktails where bitters is the main ingredient — start with less lime juice as the bitters is intensely flavoured.',
-        "flavor_profile": {"Sour": 32, "Sweet": 38, "Bitter": 92, "Strong": 55, "Fresh": 15},
+        "flavor_profile": {"Sour": 32, "Sweet": 38, "Bitter": 92, "Strong": 55, "Fresh": 15, "Creamy": 0},
     },
     {
         "id": 96,
@@ -2513,7 +2514,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Suze is a French gentian-root aperitif with an intensely bitter, floral flavour unlike anything else. It's been produced since 1889 and was a favourite of Picasso, who depicted a bottle in a 1912 Cubist collage.",
         "tip": 'Suze is an acquired taste — its floral bitterness is unlike Campari or Aperol. Try a small pour first before committing.',
-        "flavor_profile": {"Sour": 8, "Sweet": 12, "Bitter": 92, "Strong": 22, "Fresh": 72},
+        "flavor_profile": {"Sour": 8, "Sweet": 12, "Bitter": 92, "Strong": 22, "Fresh": 72, "Creamy": 0},
     },
     {
         "id": 97,
@@ -2540,7 +2541,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Whiskey Smash is a 19th-century cocktail that bridges the Mint Julep and the Sour. 'Smash' refers to the technique of muddling fresh herbs and fruit — it's one of the oldest cocktail categories.",
         "tip": 'Muddle mint gently here — it needs less pressure than basil, just enough to bruise the leaves.',
-        "flavor_profile": {"Sour": 52, "Sweet": 42, "Bitter": 12, "Strong": 68, "Fresh": 65},
+        "flavor_profile": {"Sour": 52, "Sweet": 42, "Bitter": 12, "Strong": 68, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 98,
@@ -2567,7 +2568,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Created in 2003 by Marcovaldo Dionysos at Absinthe bar in San Francisco. The swizzling technique originated in the Caribbean and uses a dried swizzle stick (branches of Quararibea turbinata tree) twirled to mix the drink.',
         "tip": "The swizzle technique chills the drink extremely fast — frost on the outside means it's at the perfect temperature.",
-        "flavor_profile": {"Sour": 52, "Sweet": 52, "Bitter": 42, "Strong": 68, "Fresh": 52},
+        "flavor_profile": {"Sour": 52, "Sweet": 52, "Bitter": 42, "Strong": 68, "Fresh": 52, "Creamy": 0},
     },
     {
         "id": 99,
@@ -2591,7 +2592,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Created by Giuseppe González in 2009, the Trinidad Sour uses 30ml of Angostura bitters as its main ingredient — an unprecedented amount for bitters. It should be too bitter, too sweet and too intense — yet it works perfectly.',
         "tip": "The high bitters volume means this is NOT boozy — Angostura is only 44.7% but you're using very little. The orgeat sweetness is essential to balance it.",
-        "flavor_profile": {"Sour": 52, "Sweet": 58, "Bitter": 82, "Strong": 48, "Fresh": 28},
+        "flavor_profile": {"Sour": 52, "Sweet": 58, "Bitter": 82, "Strong": 48, "Fresh": 28, "Creamy": 0},
     },
     {
         "id": 100,
@@ -2618,7 +2619,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Jungle Juice started as a US college party drink mixed in large batches — the name implies something wild and uncontrolled. When made properly with fresh juices, it becomes a respectable tropical punch.',
         "tip": 'Scale this up 10x for a party punch bowl — add a large ice block to slow dilution.',
-        "flavor_profile": {"Sour": 28, "Sweet": 75, "Bitter": 5, "Strong": 42, "Fresh": 18},
+        "flavor_profile": {"Sour": 28, "Sweet": 75, "Bitter": 5, "Strong": 42, "Fresh": 18, "Creamy": 0},
     },
     {
         "id": 101,
@@ -2642,7 +2643,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Falken combines Midori's bright melon sweetness with Liqueur 43's vanilla and citrus notes, softened by milk. Liqueur 43 (Cuarenta y Tres) is a Spanish liqueur made from 43 different botanicals — hence the name.",
         "tip": 'Use cold whole milk for a creamier texture. Shake briefly before serving if you want a slightly frothy top.',
-        "flavor_profile": {"Sour": 10, "Sweet": 85, "Bitter": 15, "Strong": 30, "Fresh": 40},
+        "flavor_profile": {"Sour": 10, "Sweet": 85, "Bitter": 15, "Strong": 30, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 102,
@@ -2667,7 +2668,7 @@ COCKTAILS = [
         ],
         "fun_fact": 'Xante is a Swedish pear cognac liqueur made from Williams pears and French cognac. The combination of pear, lime and Sprite creates a light, refreshing drink that goes down dangerously easily.',
         "tip": 'Use freshly squeezed lime — it makes the difference between a flat drink and something bright and alive.',
-        "flavor_profile": {"Sour": 45, "Sweet": 65, "Bitter": 5, "Strong": 50, "Fresh": 68},
+        "flavor_profile": {"Sour": 45, "Sweet": 65, "Bitter": 5, "Strong": 50, "Fresh": 68, "Creamy": 0},
     },
     {
         "id": 103,
@@ -2694,7 +2695,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Lynchburg Lemonade was created in the 1980s in Lynchburg, Tennessee — the home of Jack Daniel's. Legend has it that a bar owner sued Jack Daniel's after they used his recipe without permission, winning a settlement. It's now one of the most ordered whiskey cocktails in the world.",
         "tip": "Use real lemonade, not sparkling water with lemon — the sweetness balances the whiskey perfectly. Jack Daniel's is non-negotiable for the authentic version.",
-        "flavor_profile": {"Sour": 75, "Sweet": 45, "Bitter": 10, "Strong": 60, "Fresh": 40},
+        "flavor_profile": {"Sour": 75, "Sweet": 45, "Bitter": 10, "Strong": 60, "Fresh": 40, "Creamy": 0},
     },
     {
         "id": 104,
@@ -2720,7 +2721,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Irish Coffee was invented in 1943 by Joe Sheridan at Foynes airboat terminal in Ireland. He added whiskey to coffee to warm up cold American passengers. The key is lightly whipped cream — not stiff, so it floats perfectly.",
         "tip": "Whip the cream just until it thickens slightly — it should pour slowly. Too stiff and it won't float, too liquid and it sinks.",
-        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 40, "Strong": 65, "Fresh": 5},
+        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 40, "Strong": 65, "Fresh": 5, "Creamy": 0},
     },
     {
         "id": 105,
@@ -2746,7 +2747,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Kaffe Karlsson is a Swedish twist on the Irish Coffee — replacing whiskey with equal parts Baileys and Cointreau. The orange notes of Cointreau complement the chocolate and cream flavours of Baileys beautifully.",
         "tip": "Use equal parts Baileys and Cointreau — 25 ml each. The orange from Cointreau cuts through the sweetness of Baileys perfectly.",
-        "flavor_profile": {"Sour": 5, "Sweet": 75, "Bitter": 30, "Strong": 40, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 75, "Bitter": 30, "Strong": 40, "Fresh": 10, "Creamy": 0},
     },
     {
         "id": 106,
@@ -2771,7 +2772,7 @@ COCKTAILS = [
         ],
         "fun_fact": "Baileys Irish Cream was launched in 1974 and was the first Irish cream liqueur ever produced. It has a shelf life of two years unopened — the cream is preserved by the alcohol. Baileys Coffee is one of the most ordered warm cocktails in Scandinavia.",
         "tip": "The coffee should be strong and freshly brewed — weak coffee gets lost behind the Baileys. Use espresso or strong filter coffee.",
-        "flavor_profile": {"Sour": 5, "Sweet": 80, "Bitter": 25, "Strong": 35, "Fresh": 5},
+        "flavor_profile": {"Sour": 5, "Sweet": 80, "Bitter": 25, "Strong": 35, "Fresh": 5, "Creamy": 0},
     },
     {
         "id": 107,
@@ -2795,7 +2796,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Galliano Hot Shot is one of the most visually stunning shots in bartending — three perfectly distinct layers in a single shot glass. Galliano's vanilla and anise notes pair perfectly with espresso. The layering works because each liquid has a different density.",
         "tip": "Temperature matters — the Galliano should be room temperature and the espresso freshly pulled and hot. Pour each layer very slowly over the back of a spoon for clean separation.",
-        "flavor_profile": {"Sour": 5, "Sweet": 65, "Bitter": 45, "Strong": 40, "Fresh": 10},
+        "flavor_profile": {"Sour": 5, "Sweet": 65, "Bitter": 45, "Strong": 40, "Fresh": 10, "Creamy": 0},
     },
      {
         "id": 108,
@@ -2821,7 +2822,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Queen Elizabeth cocktail dates to the 1930s and was named in honour of the British royal family. It belongs to the sour family — gin, citrus and orange liqueur — elevated by a small measure of Bénédictine, the French herbal liqueur made by monks from 27 plants and spices.",
         "tip": "Bénédictine is very potent — 5 ml adds depth without dominating. Increase only if you know you love it.",
-        "flavor_profile": {"Sour": 60, "Sweet": 45, "Bitter": 25, "Strong": 65, "Fresh": 20},
+        "flavor_profile": {"Sour": 60, "Sweet": 45, "Bitter": 25, "Strong": 65, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 109,
@@ -2847,7 +2848,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Yellow Bird is a classic Caribbean cocktail named after the famous calypso song 'Yellow Bird' from the 1950s. Galliano's vanilla and anise notes give it a distinctive herbal sweetness that sets it apart from other rum sours.",
         "tip": "Galliano is the star here — don't substitute it. Its unique vanilla-anise flavour is what makes this drink unmistakable.",
-        "flavor_profile": {"Sour": 65, "Sweet": 60, "Bitter": 15, "Strong": 55, "Fresh": 20},
+        "flavor_profile": {"Sour": 65, "Sweet": 60, "Bitter": 15, "Strong": 55, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 110,
@@ -2870,7 +2871,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Black Russian was created in 1949 in Brussels by bartender Gustave Tops for the American ambassador. Add cream and it becomes a White Russian — made famous by The Dude in The Big Lebowski.",
         "tip": "Use a large ice cube for slower dilution. The ratio is flexible — add more Kahlúa for sweetness or more vodka for strength.",
-        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 40, "Strong": 75, "Fresh": 5},
+        "flavor_profile": {"Sour": 5, "Sweet": 55, "Bitter": 40, "Strong": 75, "Fresh": 5, "Creamy": 0},
     },
     {
         "id": 111,
@@ -2897,7 +2898,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The John Collins is the bourbon version of the Tom Collins. The Collins family of cocktails is named after a famous 19th-century hoax — people were told a man named Tom Collins was spreading rumours about them.",
         "tip": "Shake briefly to keep the carbonation — you want the soda water to stay fizzy.",
-        "flavor_profile": {"Sour": 65, "Sweet": 40, "Bitter": 15, "Strong": 55, "Fresh": 75},
+        "flavor_profile": {"Sour": 65, "Sweet": 40, "Bitter": 15, "Strong": 55, "Fresh": 75, "Creamy": 0},
     },
     {
         "id": 112,
@@ -2927,7 +2928,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Ramos Gin Fizz was invented in 1888 in New Orleans by Henry C. Ramos. During Mardi Gras, he employed 35 bartenders just to shake this cocktail. Governor Huey Long loved it so much he flew his bartender to New York to teach the Roosevelt Hotel how to make it.",
         "tip": "The long shake is non-negotiable — it emulsifies the cream and egg white into a silky foam. Less than 5 minutes and the texture will disappoint.",
-        "flavor_profile": {"Sour": 65, "Sweet": 50, "Bitter": 10, "Strong": 45, "Fresh": 65},
+        "flavor_profile": {"Sour": 65, "Sweet": 50, "Bitter": 10, "Strong": 45, "Fresh": 65, "Creamy": 75},
     },
     {
         "id": 113,
@@ -2954,7 +2955,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Painkiller was created in the 1970s at the Soggy Dollar Bar in the British Virgin Islands — a bar only accessible by boat. Sailors had to swim ashore with wet dollars to pay, hence the name. Pusser's Rum owns the trademark on the name.",
         "tip": "Fresh nutmeg is essential — pre-ground nutmeg is a pale substitute. A microplane grater gives the best results.",
-        "flavor_profile": {"Sour": 20, "Sweet": 75, "Bitter": 5, "Strong": 60, "Fresh": 45},
+        "flavor_profile": {"Sour": 20, "Sweet": 75, "Bitter": 5, "Strong": 60, "Fresh": 45, "Creamy": 70},
     },
     {
         "id": 114,
@@ -2980,7 +2981,7 @@ COCKTAILS = [
         ],
         "fun_fact": "El Presidente was created in 1920s Havana during Prohibition, when Americans flocked to Cuba for legal drinking. Named after Cuban president Gerardo Machado, it's considered the Cuban answer to the Manhattan — stirred, spirit-forward and elegant.",
         "tip": "Stir, never shake — this is a spirit-forward cocktail that should be clear and silky.",
-        "flavor_profile": {"Sour": 10, "Sweet": 55, "Bitter": 20, "Strong": 70, "Fresh": 30},
+        "flavor_profile": {"Sour": 10, "Sweet": 55, "Bitter": 20, "Strong": 70, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 115,
@@ -3005,14 +3006,14 @@ COCKTAILS = [
         ],
         "fun_fact": "Tommy's Margarita was created in the 1990s by Julio Bermejo at Tommy's Mexican Restaurant in San Francisco. By replacing triple sec with agave nectar, it lets the tequila shine rather than competing with orange liqueur. It's now recognised by the IBA as an official cocktail.",
         "tip": "Use a high-quality blanco tequila — without triple sec to balance it, the agave flavour takes centre stage.",
-        "flavor_profile": {"Sour": 80, "Sweet": 35, "Bitter": 5, "Strong": 60, "Fresh": 30},
+        "flavor_profile": {"Sour": 80, "Sweet": 35, "Bitter": 5, "Strong": 60, "Fresh": 30, "Creamy": 0},
     },
     {
         "id": 116,
         "name": "Aperol & Tonic",
         "emoji": "🍊",
-        "spirit": "aperol",
-        "spirit_label": "Aperol",
+        "spirit": "other",
+        "spirit_label": "Other",
         "flavors": ["bitter", "fresh", "light", "citrus"],
         "difficulty": "Very easy",
         "glass": "Copa glass or highball",
@@ -3029,14 +3030,14 @@ COCKTAILS = [
         ],
         "fun_fact": "The Aperol & Tonic is a modern low-ABV alternative to the Aperol Spritz. Tonic water adds quinine bitterness that complements Aperol's orange notes, making it more complex than a simple spritz.",
         "tip": "Use a premium tonic like Fever-Tree — the bitterness and carbonation quality make a big difference.",
-        "flavor_profile": {"Sour": 15, "Sweet": 40, "Bitter": 75, "Strong": 18, "Fresh": 70},
+        "flavor_profile": {"Sour": 15, "Sweet": 40, "Bitter": 75, "Strong": 18, "Fresh": 70, "Creamy": 0},
     },
     {
         "id": 117,
         "name": "Lillet Spritz",
         "emoji": "🥂",
-        "spirit": "aperol",
-        "spirit_label": "Aperol",
+        "spirit": "other",
+        "spirit_label": "Other",
         "flavors": ["floral", "fresh", "light", "elegant"],
         "difficulty": "Very easy",
         "glass": "Large wine glass",
@@ -3053,14 +3054,14 @@ COCKTAILS = [
         ],
         "fun_fact": "Lillet is a French aperitif wine from Bordeaux, made from wine, citrus liqueur and quinine. It was created in 1872 and famously used in James Bond's Vesper Martini. As a spritz it's elegant, floral and lower in alcohol than most cocktails.",
         "tip": "Serve very cold — Lillet Blanc loses its delicate floral notes if it's not ice cold.",
-        "flavor_profile": {"Sour": 15, "Sweet": 35, "Bitter": 30, "Strong": 15, "Fresh": 85},
+        "flavor_profile": {"Sour": 15, "Sweet": 35, "Bitter": 30, "Strong": 15, "Fresh": 85, "Creamy": 0},
     },
     {
         "id": 118,
         "name": "Kir",
         "emoji": "🍇",
-        "spirit": "aperol",
-        "spirit_label": "Aperol",
+        "spirit": "other",
+        "spirit_label": "Other",
         "flavors": ["fruity", "light", "sweet", "elegant"],
         "difficulty": "Very easy",
         "glass": "Wine glass",
@@ -3076,14 +3077,14 @@ COCKTAILS = [
         ],
         "fun_fact": "The Kir was named after Félix Kir, the Mayor of Dijon, who popularised it after WWII as a way to support local Burgundy wine and cassis producers. The Kir Royale uses Champagne instead of still wine — add Champagne and the drink becomes royale.",
         "tip": "Use a very dry white wine — the drier the better to balance the sweetness of cassis.",
-        "flavor_profile": {"Sour": 15, "Sweet": 45, "Bitter": 10, "Strong": 14, "Fresh": 65},
+        "flavor_profile": {"Sour": 15, "Sweet": 45, "Bitter": 10, "Strong": 14, "Fresh": 65, "Creamy": 0},
     },
     {
         "id": 119,
         "name": "Stinger",
         "emoji": "🐝",
-        "spirit": "whiskey",
-        "spirit_label": "Whiskey / Bourbon",
+        "spirit": "other",
+        "spirit_label": "Other",
         "flavors": ["minty", "strong", "sweet", "smooth"],
         "difficulty": "Easy",
         "glass": "Coupe or rocks glass",
@@ -3100,14 +3101,14 @@ COCKTAILS = [
         ],
         "fun_fact": "The Stinger was one of the most popular after-dinner drinks in America from the 1890s through the 1960s. Cognac and mint create a surprisingly elegant combination. It was a favourite of Cary Grant and the 'Rat Pack' era of Hollywood.",
         "tip": "Use white crème de menthe, not green — white keeps the drink clear and the mint flavour is cleaner.",
-        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 10, "Strong": 75, "Fresh": 20},
+        "flavor_profile": {"Sour": 5, "Sweet": 45, "Bitter": 10, "Strong": 75, "Fresh": 20, "Creamy": 0},
     },
     {
         "id": 120,
         "name": "Grasshopper",
         "emoji": "🦗",
-        "spirit": "aperol",
-        "spirit_label": "Aperol",
+        "spirit": "other",
+        "spirit_label": "Other",
         "flavors": ["minty", "sweet", "creamy", "rich"],
         "difficulty": "Easy",
         "glass": "Coupe glass",
@@ -3124,7 +3125,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Grasshopper was created in 1918 at Tujague's restaurant in New Orleans and won second place at a cocktail competition in New York. Its bright green colour comes entirely from crème de menthe. It became popular as an after-dinner dessert cocktail in the 1950s and 60s.",
         "tip": "Shake extra hard and long — the cream needs thorough chilling and aeration to give the right silky texture.",
-        "flavor_profile": {"Sour": 5, "Sweet": 85, "Bitter": 5, "Strong": 25, "Fresh": 15},
+        "flavor_profile": {"Sour": 5, "Sweet": 85, "Bitter": 5, "Strong": 25, "Fresh": 15, "Creamy": 90},
     },
     {
         "id": 121,
@@ -3154,7 +3155,7 @@ COCKTAILS = [
         ],
         "fun_fact": "The Bloody Mary was created in the 1920s at Harry's New York Bar in Paris by bartender Fernand Petiot. It was originally called 'Bucket of Blood'. The name reportedly comes from Queen Mary I of England, who executed hundreds of Protestants. It's the world's most popular brunch cocktail.",
         "tip": "Rolling rather than shaking preserves the texture of the tomato juice. Taste before serving — everyone's ideal spice level is different.",
-        "flavor_profile": {"Sour": 40, "Sweet": 15, "Bitter": 30, "Strong": 65, "Fresh": 35},
+        "flavor_profile": {"Sour": 40, "Sweet": 15, "Bitter": 30, "Strong": 65, "Fresh": 35, "Creamy": 0},
     },
 ]
 

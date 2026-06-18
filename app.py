@@ -251,7 +251,7 @@ html = (
     f'<div style="flex-shrink:0">{glass_svg}</div>' +
     f'<div style="font-family:serif;font-size:clamp(1.2rem,5vw,2rem);color:#c9a84c;font-weight:700;line-height:1.1">{featured["name"]}</div>' +
     '</div>' +
-    f'<div style="color:#8a7f6e;font-size:0.82rem;margin-bottom:10px">{featured["spirit_label"]}  ·  {featured["glass"]}</div>' +
+    f'<div style="color:#8a7f6e;font-size:0.82rem;margin-bottom:10px">{featured["glass"]}</div>' +
     f'<div style="color:#e8dcc8;font-size:0.88rem;line-height:1.65">{featured["fun_fact"]}</div>' +
     '</div>'
 )
